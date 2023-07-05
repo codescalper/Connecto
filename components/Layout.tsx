@@ -1,7 +1,5 @@
-import React from 'react';
-
-
 import Sidebar from "./layout/Sidebar"
+import FollowBar from './layout/FollowBar';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -18,7 +16,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           ">
             {children}
           </div>
-
+            <FollowBar/>
         </div>
      </div>
     </div>
