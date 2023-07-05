@@ -5,7 +5,7 @@ import { BsTwitter } from "react-icons/bs";
 
 const SidebarLogo = () =>{
     return (
-        <div onClick={() =>router.push('/')}
+        <div onClick={() =>router.push('/')} //For mobile/tabs screens
          className="
         rounded-full
         h-14
@@ -13,7 +13,7 @@ const SidebarLogo = () =>{
         flex
         items-center
         justify-center
-        hover:bg-amber-500
+        hover:bg-emerald-500
         hover:bg-opacity-10
         cursor-pointer
         transition

@@ -1,6 +1,7 @@
 import {BsHouseFill,BsBellFill} from 'react-icons/bs'
 import {FaUser} from 'react-icons/fa'
 import SidebarLogo from './SidebarLogo'
+import SidebarItem from './SidearItem'
 
 const Sidebar = () =>{
     const items = [
@@ -26,6 +27,14 @@ const Sidebar = () =>{
             <div className='flex felx-col items-end'>
                 <div className='space-y-2 lg:w-[230px]'>
                     <SidebarLogo/>
+                    {items.map((item) =>(
+                        <SidebarItem
+                        key = {item.href}
+                        href ={item.href}
+                        label = {item.label}
+                        icon = {item.icon}
+                        />
+                    ))}
                 </div>
             </div>
         </div>
