@@ -3,7 +3,7 @@ import {FaUser} from 'react-icons/fa'
 import {BiLogOut} from 'react-icons/bi'
 import SidebarLogo from './SidebarLogo'
 import SidebarItem from './SidearItem'
-import SidebarTweetButton from './SidebarTweetButton'
+import SidebarPostButton from './SidebarPostButton'
 
 const Sidebar = () =>{
     const items = [
@@ -38,7 +38,7 @@ const Sidebar = () =>{
                         />
                     ))}
                     <SidebarItem onClick={()=>{}} icon={BiLogOut} label='Logout'/>
-                    <SidebarTweetButton />
+                    <SidebarPostButton />
                 </div>
             </div>
         </div>
