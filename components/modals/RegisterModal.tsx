@@ -1,9 +1,11 @@
 import { useCallback, useState } from 'react';
+import {signIn} from 'next-auth/react'
 import Input from '../Input';
 import Modal from '../Modal';
 import useLoginModal from "@/hooks/useLoginModal";
 import useRegisterModal from '@/hooks/useRegister';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 
 const RegisterModal = () => {
@@ -34,10 +36,16 @@ const RegisterModal = () => {
         username,
         name,
       } )
+      toast.success('Account Created.')
+      signIn('credentials',{
+        email,
+        password
+      })
 
       registerModal.onClose();
     } catch (error) {
       console.log(error);
+      toast.error("Something went worng.")
     } finally {
       setIsLoading(false);
     }
